@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/1592328.png" type="image/x-icon">
+
+    <!-- bootstrape cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- local css links -->
+    <link rel="stylesheet" href="./css/slide.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/search_bar.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/content_details.css">
+    <!-- title -->
+    <title>IMDB | Description</title>
+</head>
+
+<body>
+    <!-- bootstrape container for shorter width -->
+    <div class="container">
+        <header>
+            <!-- nav bar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <!-- home button -->
+                <a class="navbar-brand " href="./index.html"><span class="badge"
+                        style="background-color: rgb(245,197,24);color: rgb(34,34,42);font-size: large;margin-left: 1rem;"><strong>IMDB</strong></span>
+                </a>
+                <!-- dropdown button for smaller screen -->
+                <button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- drop down -->
+                <div class="collapse navbar-collapse p-3" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html#favorite">Favorites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html#topMovies">Top Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html#topSeries">Top Sires</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- result container -->
+                <!-- <div class="container">
+                    <div class="result-container">
+                        <div class="result-grid" id="result-grid">
+
+                        </div>
+                    </div>
+                </div> -->
+            </nav>
+        </header>
+        <main>
+            <!-- detail information from api call -->
+            <div class="container">
+                <div class="result-container">
+                    <div class="result-grid" id="result-grid">
+                        <!-- movie information here -->
+                        <!-- <div class="movie-poster">
+                            <img src="./images/batman.jpg" alt="movie poster">
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">Guardians of the Galaxy Vol. 2</h3>
+                            <ul class="movie-misc-info">
+                                <li class="rated">Ratings: PG-13</li>
+                                <li class="year">Year: 2017</li>
+                                <li class="released">&nbsp;Released: 05 May 2017</li>
+                            </ul>
+                            <p class="genre"><b>Genre:</b> Action, Adventure, Comedy</p>
+                            <p class="writer"><b>Writer:</b> James Gunn, Don Abnett, Andy Lanning</p>
+                            <p class="actors"><b>Actors: </b>Chris Pratt, Zoe Saldana, Dave Bautista</p>
+                            <p class="plot"><b>Plot:</b> The Guardians struggle to keep together as a team while dealing
+                                with their
+                                personal family issues, notably Star-Lord's ecounter with his father the ambitious
+                                celestial being
+                                Ego.</p>
+                            <p class="language"><b>Language:</b> English</p>
+                            <p class="awards"><b><i class="fas fa-award"></i></b> Nominated for 1 Oscar</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+        </footer>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+<!-- bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- local javascript -->
+
+<script src="./js/content_details.js"></script>
+
+</html>

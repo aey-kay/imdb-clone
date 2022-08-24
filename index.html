@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- BootStrap Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/1592328.png" type="image/x-icon">
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="./css/slide.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/search_bar.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <!-- Title -->
+    <title>IMDB Clone by Amit Kumar</title>
+</head>
+
+<body>
+    <!-- bootstram container for shorter width -->
+    <div class="container">
+        <header>
+            <!-- Nav Bar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand " href="#"><span class="badge"
+                        style="background-color: rgb(245,197,24);color: rgb(34,34,42);font-size: large;margin-left: 1rem;"><strong>IMDB</strong></span>
+                </a>
+                <!-- nav bar dropdown button for smaller screen -->
+                <button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- search box -->
+                <div class="box">
+                    <form name="search">
+                        <input onkeyup="findMovies()" onclick="findMovies()" id="movie-search-box" type="text"
+                            class="input" name="txt" onfocusout="document.search.txt.value = ''">
+                    </form>
+                    <i class=" fas fa-search"></i>
+                </div>
+                <!-- serach list -->
+                <div class="search-list" id="search-list">
+                </div>
+                <!-- nav bar droup down -->
+                <div class="collapse navbar-collapse p-3" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!-- inner link to home -->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <!-- inner link to favorite -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#favorite">Favorites</a>
+                        </li>
+                        <!-- inner link to topMovies -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#topMovies">Top Movies</a>
+                        </li>
+                        <!-- inner link to topSeries -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#topSeries">Top Series</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Slide show -->
+            <div class="content-width">
+                <div class="slideshow">
+                    <!-- Slideshow Items -->
+                    <div class="slideshow-items">
+                        <!-- Top gun movie item -->
+                        <div class="item" id="topGun">
+                            <div class="item-image-container">
+                                <img class="item-image" src="./images/top_gun.jpg" />
+                            </div>
+                            <!-- Staggered Header Elements -->
+                            <div class="item-header">
+                                <span class="vertical-part"><b>T</b></span>
+                                <span class="vertical-part"><b>O</b></span>
+                                <span class="vertical-part"><b>P</b></span>
+                                <span class="vertical-part"><b>&nbsp;</b></span>
+                                <span class="vertical-part"><b>G</b></span>
+                                <span class="vertical-part"><b>U</b></span>
+                                <span class="vertical-part"><b>N</b></span>
+                            </div>
+                            <!-- Staggered Description Elements -->
+                            <div class="item-description">
+                                <span class="vertical-part">
+                                    <b>
+                                        <strong class="slide-rating">⭐8.6</strong>
+                                        <br>
+
+                                    </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>After more than thirty years of service as one of the Navy's top aviators, Pete
+                                        Mitchell is where he belongs, pushing
+                                        the envelope as a courageous test pilot and dodging the advancement in rank that
+                                        would ground him.</b>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- doctor Strange movie item -->
+                        <div class="item" id="drStrange">
+                            <div class="item-image-container">
+                                <img class="item-image" src="./images/dr_strange.jpg" />
+                            </div>
+                            <!-- Staggered Header Elements -->
+                            <div class="item-header">
+                                <span class="vertical-part"><b>D</b></span>
+                                <span class="vertical-part"><b>R</b></span>
+                                <span class="vertical-part"><b>&nbsp;</b></span>
+                                <span class="vertical-part"><b>S</b></span>
+                                <span class="vertical-part"><b>T</b></span>
+                                <span class="vertical-part"><b>R</b></span>
+                                <span class="vertical-part"><b>A</b></span>
+                                <span class="vertical-part"><b>N</b></span>
+                                <span class="vertical-part"><b>G</b></span>
+                                <span class="vertical-part"><b>E</b></span>
+                            </div>
+                            <!-- Staggered Description Elements -->
+                            <div class="item-description">
+                                <span class="vertical-part">
+                                    <b><strong class="slide-rating">⭐7.3</strong>
+                                        <br>
+                                    </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>Doctor Strange teams up with a mysterious teenage girl from his dreams who can
+                                        travel across multiverses, to battle
+                                        multiple threats, including other-universe versions of himself, which threaten
+                                        to wipe out millions across the
+                                        multiverse. They seek help from Wanda the Scarlet Witch, Wong and others.</b>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- batman movie item -->
+                        <div class="item" id="batman">
+                            <div class="item-image-container">
+                                <img class="item-image" src="./images/batman.jpg" />
+                            </div>
+                            <!-- Staggered Header Elements -->
+                            <div class="item-header">
+                                <span class="vertical-part"><b>B</b></span>
+                                <span class="vertical-part"><b>A</b></span>
+                                <span class="vertical-part"><b>T</b></span>
+                                <span class="vertical-part"><b>M</b></span>
+                                <span class="vertical-part"><b>A</b></span>
+                                <span class="vertical-part"><b>N</b></span>
+                            </div>
+                            <!-- Staggered Description Elements -->
+                            <div class="item-description">
+                                <span class="vertical-part">
+                                    <b>
+                                        <strong class="slide-rating">⭐7.9</strong>
+                                    </b>
+                                </span>
+                                <span class="vertical-part">
+                                    <b>When a sadistic serial killer begins murdering key political figures in Gotham,
+                                        Batman is forced to investigate the
+                                        city's hidden corruption and question his family's involvement.</b>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bootom control cubes -->
+                    <div class="controls">
+                        <ul>
+                            <li class="control" data-index="0"></li>
+                            <li class="control" data-index="1"></li>
+                            <li class="control" data-index="2"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Movie Cards -->
+            <div class="row top" id="topMovies">
+                <div class="header">
+                    <span class="title">Top Movies</span>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="containers">
+                    <div class="slider">
+                    </div>
+                </div>
+
+            </div>
+            <!-- Top Serires Cards -->
+            <div class="row top" id="topSeries">
+                <div class="header">
+                    <span class="title">Top Series</span>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="containers">
+                    <div class="slider">
+                    </div>
+                </div>
+
+            </div>
+            <!-- Favorites Cards -->
+            <div class="row" id="favorite">
+                <div class="header">
+                    <span class="title">Favorites</span>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="containers">
+                    <div class="slider">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <div class="hide-search-list-container">
+
+    </div>
+
+    <footer>
+        <span>© All Rights Reserved By Author(Amit Kumar)</span>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- local javascript links -->
+    <script src="./js/slide.js"></script>
+    <script src="./js/api_calls.js"></script>
+    <script src="./js/search_bar.js"></script>
+
+</body>
+<!-- bootstrape js cdn -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

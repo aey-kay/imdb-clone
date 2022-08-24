@@ -1,0 +1,51 @@
+
+/* home css for outer structure of home oage */
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/imdb_bacground.png);
+    background-attachment: fixed;
+    font-family: 'Fira Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+    font-size: .88rem;
+    color: #bdbdd5;
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+footer {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282828;
+    font-size: 2em;
+}
+.hide-search-list-container {
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    width: 20%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+}
+@media all and (max-width: 400px) {
+    
+
+    footer {
+        font-size: 1em;
+        height: 50px;
+    }
+    .hide-search-list-container {
+        
+        width: 0%;
+        
+    }
+
+
+}

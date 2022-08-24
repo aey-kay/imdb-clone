@@ -1,0 +1,323 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+/* css variables */
+:root {
+    --background-color: #282828;
+    --handle-size: 2.5rem;
+    --img-gap: .25rem;
+    --size: 3.5rem;
+    --frames: 62;
+}
+
+/* outer container */
+.containers {
+    width: 100%;
+    overflow: scroll;
+    overflow-y: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* scroll beautification */
+.containers::-webkit-scrollbar {
+    width: 1rem;
+}
+.containers::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    
+}
+.containers::-webkit-scrollbar-thumb {
+    background-color: rgb(245, 197, 24);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    
+}
+
+/* card holder */
+.slider {
+    width: 94%;
+    --items-per-screen: 4;
+    --slider-index: 0;
+    display: flex;
+    flex-grow: 1;
+    margin: 0 var(--img-gap);
+    transform: translateX(calc(var(--slider-index) * -100%));
+    transition: transform 250ms ease-in-out;
+}
+
+/* card */
+/* card header */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem calc(var(--img-gap) * 2 + var(--handle-size));
+    
+}
+/* title */
+.title {
+    height: 5rem;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: -20rem;
+    z-index: 10;
+}
+/* .progress-bar {
+    background: #22222A;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.progress-item {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.progress-item.active {
+    background-color: rgba(255, 255, 255, .9);
+} */
+
+
+
+
+/* card styling */
+.containers .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color);
+    border: none;
+    height: 750px;
+}
+
+.containers .card .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    transition: 0.7s;
+    z-index: 1;
+}
+
+.containers .card .icon img{
+    height: 100%;
+    width: 100%;
+    background-size: 10%;
+
+}
+
+.containers .card .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.7s;
+    color: #fff;
+}
+
+.containers .card .face {
+    width: 240px;
+    height: 356px;
+    transition: 0.5s;
+}
+
+.containers .card .face.face1 {
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    cursor: pointer;
+    
+}
+
+.slider>.card {
+
+    flex: 0 0 calc(100% / var(--items-per-screen));
+    max-width: calc(100% / var(--items-per-screen));
+    aspect-ratio: 16 / 9;
+}
+
+
+
+/* div that containes rating and like button */
+.rating-like-button {
+    position: relative;
+    display: flex;
+    margin-bottom: -5px;
+    justify-content: space-between;
+    color: black;
+}
+/* trailer button */
+.card-trailer {
+    position: relative;
+    top: 30px;
+    left:70px;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+.card-trailer:hover {
+
+    background-color: rgb(44, 44, 44);
+    padding: 0.5rem;
+
+}
+
+/* card faces */
+/* card face 1 */
+.containers .card:hover .face.face1 {
+    background: #ff0057;
+    transform: translateY(90px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+
+.containers .card .face.face1 .content {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.containers .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.containers .card .face.face1 .content i {
+    max-width: 100px;
+}
+/* card face 2 with information and like button */
+.containers .card .face.face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    
+    transform: translateY(-256px);
+}
+
+.containers .card:hover .face.face2 {
+    transform: translateY(-50px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.containers .card .face.face2 .content p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #414141;
+}
+
+.containers .card .face.face2 .content h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    color: #414141;
+}
+
+.containers a {
+    text-decoration: none;
+    color: #414141;
+}
+
+/* heart like button  */
+.like>input {
+    display: none;
+}
+
+.like {
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    margin-top: -7px;
+    margin-left: 105px;
+    cursor: pointer;
+    border-radius: 999px;
+    overflow: visible;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hearth {
+    background-image: url("https://assets.codepen.io/23500/Hashflag-AppleEvent.svg");
+    background-size: calc(var(--size) * var(--frames)) var(--size);
+    background-repeat: no-repeat;
+    background-position-x: calc(var(--size) * (var(--frames) * -1 + 2));
+    background-position-y: calc(var(--size) * 0.02);
+    width: var(--size);
+    height: var(--size);
+}
+
+input:checked+.hearth {
+    animation: like 1s steps(calc(var(--frames) - 3));
+    animation-fill-mode: forwards;
+}
+/* media Query*/
+@media (max-width: 1300px) {
+    .slider {
+        --items-per-screen: 3;
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .slider {
+        --items-per-screen: 2;
+    }
+}
+
+@media (max-width: 550px) {
+    .slider {
+        --items-per-screen: 1;
+    }
+}
+
+@keyframes like {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: calc(var(--size) * (var(--frames) * -1 + 3));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-right {
+        width: 0px;
+    }
+
+    .main-right-title {
+        visibility: hidden;
+    }
+
+    .main-left {
+        width: 100%;
+    }
+
+    .main {
+        width: 100%;
+    }
+}
+
